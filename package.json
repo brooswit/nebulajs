@@ -1,20 +1,17 @@
 {
-  "name": "electron-quick-start",
+  "name": "nebulajs",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Decentralized game engine",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .".
+    "build": "make"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/brooswit/nebulajs",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "Electron"
   ],
-  "author": "GitHub",
+  "author": "Brooswit",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^27.1.0"

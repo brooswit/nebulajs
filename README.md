@@ -37,11 +37,8 @@ https://threejs.org/docs/
 ### Three Voxel Loader
 https://github.com/andstor/three-voxel-loader
 
-### CannonJS
-https://schteppe.github.io/cannon.js/
-
-### Vox.js
-https://github.com/voxjs/vox
+### React-Three Cannon
+https://www.npmjs.com/package/@react-three/cannon
 
 ### GameInputs
 https://github.com/fenomas/game-inputs

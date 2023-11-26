@@ -30,7 +30,7 @@ class Application {
       },
     });
 
-    // mainWindow.setMenu(null);
+    mainWindow.webContents.openDevTools()
 
     mainWindow.once("ready-to-show", () => {
       mainWindow.show();

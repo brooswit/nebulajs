@@ -1,17 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 import { Canvas } from "@react-three/fiber";
 import { Leva, useControls } from "leva";
 import SquareBox from "./square-box";
 
+import Nebula from "../nebula"
+
 interface ApplicationProps {}
 
 const Application = (props: ApplicationProps) => {
-  const values = useControls({
-    x: 0,
-    y: 0,
-    z: 0,
-    color: "yellow",
-    hoverColor: "green",
+  let nebula = new Nebula();
+  console.log(nebula);
+  let [boxList, updateBoxList] = useState(nebula.getBoxList());
+  nebula.on('box-list-updated', ()=>{
+    updateBoxList(nebula.getBoxList());
   });
 
   return (
@@ -19,11 +20,14 @@ const Application = (props: ApplicationProps) => {
       <Canvas>
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
-        <SquareBox
-          position={[values.x, values.y, values.z]}
-          color={values.color}
-          hoverColor={values.hoverColor}
-        />
+        {boxList.map(box => 
+          <SquareBox
+            position={[box.x, box.y, box.z]}
+            rotation={[box.pitch, box.yaw, box.roll]}
+            color={box.color}
+            scale={box.scale}
+          />
+        )}
       </Canvas>
 
       <Leva />

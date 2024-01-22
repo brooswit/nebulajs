@@ -56,7 +56,7 @@
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "socket.io": "^4.7.2",
-        "three": "^0.152.2",
+        "three": "^0.160.1",
         "three-voxel-loader": "^1.2.2"
     },
     "engines": {
